@@ -27,11 +27,18 @@ cursor = conexao.cursor()
 
 
 #UPDATE
-nome_produtos = "todynho"
-valor = 6 
-comando = f'UPDATE vendas SET valor = {valor} WHERE nome_produtos = "{nome_produtos}"'
+# nome_produtos = "todynho"
+#valor = 6 
+#comando = f'UPDATE vendas SET valor = {valor} WHERE nome_produtos = "{nome_produtos}"'
+#cursor.execute(comando)
+#conexao.commit() #edita o banco de dados
+
+#DELETE 
+nome_produtos = "arroz"
+comando = f'DELETE FROM vendas WHERE nome_produtos = "{nome_produtos}"'
 cursor.execute(comando)
 conexao.commit() #edita o banco de dados
+
 
 
 cursor.close()
